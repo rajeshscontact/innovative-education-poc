@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "innovativeeducation7768f57a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

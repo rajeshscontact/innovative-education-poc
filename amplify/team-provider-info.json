@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-innovativeeducation-dev-83502-authRole",
+      "UnauthRoleArn": "arn:aws:iam::266404401434:role/amplify-innovativeeducation-dev-83502-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::266404401434:role/amplify-innovativeeducation-dev-83502-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-innovativeeducation-dev-83502-deployment",
+      "UnauthRoleName": "amplify-innovativeeducation-dev-83502-unauthRole",
+      "StackName": "amplify-innovativeeducation-dev-83502",
+      "StackId": "arn:aws:cloudformation:us-east-1:266404401434:stack/amplify-innovativeeducation-dev-83502/af195c40-36fe-11eb-b8f0-0afe492705d7",
+      "AmplifyAppId": "d1rd1mal1xh673"
+    },
+    "categories": {
+      "auth": {
+        "innovativeeducation7768f57a": {}
+      }
+    }
+  }
+}
