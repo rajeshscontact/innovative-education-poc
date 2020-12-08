@@ -13,5 +13,21 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "api": {
+    "coursesApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "courseslambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
   }
 }

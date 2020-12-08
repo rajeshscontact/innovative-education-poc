@@ -106,21 +106,14 @@ app.listen(3000, function() {
 // this file
 module.exports = app
 
-const getCourses = (params, callback) => {
-  const items = []
-  ddb.query(params,(err,result) => {
-    if(err) {
-      console.log(err)
-      callback(err)
-    } else {
-      items.push(result)
-      console.log(result)
-      if(result.LastEvaluatedKey) {
-        params.ExclusiveStartKey = result.LastEvaluatedKey
-        getCourses(params, callback)
-      } else {
-        callback(err,items)
-      }
-    }
-  })
+const getCourses = async (params, callback) => {
+  let scanResults = [];
+  let items;
+  do{
+    items =  await ddb.scan(params).promise();
+    items.Items.forEach((item) => scanResults.push(item));
+    params.ExclusiveStartKey  = items.LastEvaluatedKey;
+  }while(typeof items.LastEvaluatedKey != "undefined");
+
+  callback(null, scanResults)
 }

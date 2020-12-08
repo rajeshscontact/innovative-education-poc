@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/list",
+            "lambdaFunction": "courseslambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/list"
+        }
+    ],
+    "resourceName": "coursesApi",
+    "apiName": "coursesApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "courseslambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-innovativeeducation-dev-83502-authRole",
+        "unAuthRoleName": "amplify-innovativeeducation-dev-83502-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "courseslambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

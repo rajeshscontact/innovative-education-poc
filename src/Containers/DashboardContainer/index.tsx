@@ -9,6 +9,7 @@ import { colors } from '../../Themes/Colors';
 /** App Constatns */
 import { AUTH_USER_TOKEN_KEY } from '../../Utils/constants';
 import { ClickParam } from 'antd/lib/menu';
+import CoursesContainer from '../CoursesContainer';
 
 const DashBoardContainer: React.SFC<RouteComponentProps> = props => {
   const [collapsed, setCollapsed] = React.useState(false);
@@ -60,7 +61,7 @@ const DashBoardContainer: React.SFC<RouteComponentProps> = props => {
           }}
         >
           <div className="text-center">
-            <h1>Hello world</h1>
+            <CoursesContainer  {...props}/>
           </div>
         </Layout.Content>
       </Layout>
